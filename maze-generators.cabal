@@ -1,0 +1,29 @@
+name:                maze-generators
+version:             0.1.0.0
+synopsis:            Set of haskell maze generator algorithms.
+description:         Set of haskell maze generator algorithms.
+homepage:            https://github.com/cyberfined/maze-generators
+license:             BSD3
+license-file:        LICENSE
+author:              cyberfined
+maintainer:          cyberfined@protonmail.com
+copyright:           Copyright (c) cyberfined
+category:            Algorithm
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Maze.Types, Maze.BTree, Maze.Sidewinder, Maze.AldousBroder, Maze.Wilson
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , random ==1.1.*
+
+executable maze-generators-test
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       Maze.Types, Maze.BTree, Maze.Sidewinder, Maze.AldousBroder, Maze.Wilson
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , random ==1.1.*
